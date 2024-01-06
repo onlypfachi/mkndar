@@ -1,0 +1,63 @@
+.pageWrapper {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  z-index: -1;
+  display: block;
+  width: 1200px;
+  height: 800px;
+}
+.signintext {
+  width: 491.145px;
+  height: 60.659px;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.loginwrapper {
+  width: 491px;
+  height: 463.232px;
+  flex-shrink: 0;
+  background: #fff;
+  position: relative;
+  left: 360px;
+  top: 75px;
+}
+
+.rectangles {
+  width: 31.50575rem;
+  height: 4.30588rem;
+  flex-shrink: 0;
+  border-radius: 0.6875rem;
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+#googlebutton {
+  display: flex;
+  width: 31.37769rem;
+  height: 3.69075rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

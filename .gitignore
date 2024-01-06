@@ -11,6 +11,11 @@
 # production
 /build
 
+#files
+/firebase.config.js
+/firebase.config.js.map
+
+
 # misc
 .DS_Store
 .env.local
