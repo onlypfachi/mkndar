@@ -11,6 +11,7 @@
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   top: 0px;
   left: 0px;
+  z-index: 99;
 }
 
 .navWrapper {
