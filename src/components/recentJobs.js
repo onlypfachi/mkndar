@@ -22,13 +22,10 @@ const items = [
 ]
 
 export default function RecentJobs() {
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-    }
     return (
         <div className="grid grid-col-10 items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6 flex-row h-dvh grid-cols-12">
-            <di className="grid bg-white h-screen w-full space-y-4 col-start-3 col-span-8 grid-cols-6">
-                <h4 className="col-start-1 col-span-5 h-3">Recently uploaded jobs</h4>
+            <di className="grid bg-white h-screen w-full space-y4 col-start-3 col-span-8 grid-cols-6">
+                <h3 className="col-start-1 col-span-5 h-3">Recently uploaded jobs</h3>
                 {items.map((item) => {
                     return (
                         <div className="lg:flex lg:items-center lg:justify-between flex-row  ml-10px h-48 w-full p-16 justify-items-center col-start-1 col-span-8 " >
@@ -56,7 +53,7 @@ export default function RecentJobs() {
 
                                 </div>
                                 <h4 className="text-xl leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight">
-                                    From cloud engineers to developers to security pros, the battle for the best IT talent wages. Heres <br/> what to look for (and what to offer) when hiring for the 15 most in-demand IT jobs for 2024.
+                                    From cloud engineers to developers to security pros, the battle for the best IT talent wages. Heres <br/> what to look for (and what to offer) when hiring <br/> for the 15 most in-demand IT jobs for 2024.
                                 </h4>
                             </div>
                             <div className="mt-5 flex lg:ml-4 lg:mt-0">
