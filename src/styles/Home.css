@@ -3,7 +3,7 @@
     background-image: url("../images/bgg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     text-align: center;
     display: grid;
@@ -25,7 +25,6 @@
 
 
 .searchBarWrapper {
-    background-color: black;
     grid-area: 4 / 2 / 5 / 3;
     height: 100%;
     width: 100%;

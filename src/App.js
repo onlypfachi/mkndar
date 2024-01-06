@@ -9,6 +9,7 @@ import Error from "./components/errors.js";
 import { useState } from "react";
 import Header from "./components/header.js";
 import "./styles/App.css";
+import Footer from "./components/footer.js";
 
 function App() {
   const [isAuth, setIsAuth] = useState("false");
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
