@@ -1,96 +1,79 @@
 import React from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+import {
+    BriefcaseIcon,
+    CalendarIcon,
+    CheckIcon,
+    ChevronDownIcon,
+    CurrencyDollarIcon,
+    LinkIcon,
+    MapPinIcon,
+    PencilIcon,
+} from '@heroicons/react/20/solid'
+import { Menu, Transition } from '@headlessui/react'
+import { Fragment } from 'react'
+
 
 const items = [
-    { id: 1, title: 'Back End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
-    { id: 2, title: 'Front End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
-    { id: 3, title: 'User Interface Designer', department: 'Design', type: 'Full-time', location: 'Remote' },
+    { id: 1, title: 'Back End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote', offer: '$120k &ndash; $140k', closingDate: 'Closing on January 9, 2020' },
+    { id: 2, title: 'Front End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote', offer: '$120k &ndash; $140k', closingDate: 'Closing on January 9, 2020' },
+    { id: 3, title: 'User Interface Designer', department: 'Design', type: 'Full-time', location: 'Remote', offer: '$120k &ndash; $140k', closingDate: 'Closing on January 9, 2020' },
 ]
 
 export default function RecentJobs() {
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
+    }
     return (
-        <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-            <div className="flex flex-1 justify-between sm:hidden">
-                <a
-                    href="#"
-                    className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                >
-                    Previous
-                </a>
-                <a
-                    href="#"
-                    className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                >
-                    Next
-                </a>
-            </div>
-            <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-                <div>
-                    <p className="text-sm text-gray-700">
-                        Showing <span className="font-medium">1</span> to <span className="font-medium">10</span> of{' '}
-                        <span className="font-medium">97</span> results
-                    </p>
-                </div>
-                <div>
-                    <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        >
-                            <span className="sr-only">Previous</span>
-                            <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-                        </a>
-                        {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
-                        <a
-                            href="#"
-                            aria-current="page"
-                            className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        >
-                            1
-                        </a>
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        >
-                            2
-                        </a>
-                        <a
-                            href="#"
-                            className="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex"
-                        >
-                            3
-                        </a>
-                        <span className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">
-                            ...
-                        </span>
-                        <a
-                            href="#"
-                            className="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex"
-                        >
-                            8
-                        </a>
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        >
-                            9
-                        </a>
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        >
-                            10
-                        </a>
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        >
-                            <span className="sr-only">Next</span>
-                            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-                        </a>
-                    </nav>
-                </div>
-            </div>
+        <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 flex-row">
+            <di className="bg-black h-1080px">            
+                {items.map((item) => {
+                return (
+                    <div className="lg:flex lg:items-center lg:justify-between flex-row bg-green-100 ml-10px" >
+                        <div className="min-w-0 flex-1">
+                            <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                                {item.title}
+                            </h2>
+                            <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
+                                <div className="mt-2 flex items-center text-sm text-gray-500">
+                                    <BriefcaseIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                    {item.type}
+                                </div>
+                                <div className="mt-2 flex items-center text-sm text-gray-500">
+                                    <MapPinIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                    {item.location}
+                                </div>
+                                <div className="mt-2 flex items-center text-sm text-gray-500">
+                                    <CurrencyDollarIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                    {item.offer}
+                                </div>
+                                <div className="mt-2 flex items-center text-sm text-gray-500">
+                                    <CalendarIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                    {item.closingDate}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-5 flex lg:ml-4 lg:mt-0 hover:bg-sky-700">
+
+                            <span className="ml-3 hidden sm:block hover:bg-sky-700">
+                                <a href='https://www.tadiwapfachi.dev' className="hover:text-white hover:bg-purple-600 hover:border-gray-300">
+                                    <button
+                                        type="button"
+                                        className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-purple-600 hover:border-gray-300"
+                                    >
+                                        <LinkIcon className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
+                                        View more
+                                    </button>
+                                </a>
+                            </span>
+
+                        </div>
+                    </div>
+                )
+            })}
+            </di>
+
+
         </div>
     )
 }
