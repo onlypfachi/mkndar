@@ -5,7 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import SearchBar from "../components/searchBar";
 import RecentJobs from "../components/recentJobs";
-import BlogCard from "../components/blogCard";
+import BlogCard from "../components/blogpage/blogCard";
 
 const navigation = [
   { name: 'Product', href: '#' },

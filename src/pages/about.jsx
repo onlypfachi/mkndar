@@ -1,6 +1,6 @@
 import React from 'react'
 
-function about() {
+export default function About () {
   
 
   return (
@@ -12,4 +12,3 @@ function about() {
   )
 }
 
-export default about
