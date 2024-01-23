@@ -1,4 +1,3 @@
-import { name } from "file-loader";
 import React from "react";
 
 function Avatar() {

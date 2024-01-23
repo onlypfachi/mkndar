@@ -1,8 +1,10 @@
 import React from "react";
+import Avatar from "../avatar";
 
 const blog = {
-  topic: "Advice From a Software Engineer With 8 Years of Experience",
+  topic: "Advice From a Software Engineer With 8 Years of Experience !!!",
   title: "blog title",
+  date: "2021-06-25",
   description: "Practical tips for those who want to advance in their careers",
   author: "tadiwa pfachi",
   image: "blog image",
@@ -12,13 +14,14 @@ const blog = {
 const date = new Date();
 function Blogpost() {
   return (
-    <div className="flex flex-col  items-center">
-      <span className="p-2">
-        <code className="">By {blog.author}</code>
-        <code>On {date.toString()}</code>
+    <div className="grid items-center bg-white w-full rounded-lg shadow-lg h-64 grid-cols-12 grid-rows-12">
+      <span className="grid h-12 grid-cols-12 justify-items-center align-middle w-full row-start-1 row-span-2 col-start-1 col-span-12 overflow-hidden">
+        <Avatar className="col-span-1 col-start-1 h-50% bg-white overflow-hidden" />
+        <code className="col-span-3 col-start-2 h-full w-full ">By {blog.author}</code>
+        <code className="col-span-8 col-start-5 h-full w-full">On {blog.date}</code>
       </span>
-      <h2 className="text-2xl font-semibold p-4">{blog.topic}</h2>
-      <p className=""></p>
+      <h2 className="text-2xl text-left mt-2 ml-5 font-bold row-start-3 row-span-3 col-span-12 align-left whitespace-pre-line">{blog.topic}</h2>
+      <p  className="text-s text-ellipsis overflow-hidden row-start-6 row-span-5 col-span-12 whitespace-pre-line">{blog.body}</p>
     </div>
   );
 }
