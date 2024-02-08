@@ -167,7 +167,7 @@ function jobs() {
             </p>
             <button
               type="button"
-              className="mt-2 h-10 inline-block rounded px-6 text-xl font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#54b4d3] bg-indigo-500"
+              className="mt-2 h-10 inline-block rounded px-6 text-xl font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#54b4d3] bg-indigo-500 mb-4"
             >
               Apply Now
             </button>
