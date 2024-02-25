@@ -28,7 +28,7 @@ function SearchBar() {
     ];
 
     return (
-        <div className="mt-6 text-lg leading-8 text-gray-600 border border-5px justify-items-center ">
+        <div className="mt-6 text-lg leading-8 text-gray-600 border border-5px justify-items-center h-full">
             <form className="text-lg leading-8 text-gray-600 height-100% grid grid-cols-3 gap-4 justify-items-center align-items-center mx-auto" >
                 <select className="p-4 h-100%">
                     <option value="">Select job</option>

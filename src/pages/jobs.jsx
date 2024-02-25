@@ -8,7 +8,7 @@ function jobs() {
   const color = "#" + randomColor;
 
   return (
-    <main className="flex gap-5 flex-col relative m-auto">
+    <section className="flex gap-5 flex-col relative m-auto mt-20 ">
       <div id="pageTitle" className="mt-20 h-36 text-center w-full z-99 mb-10">
         <h3 className="h-12 text-4xl font-bold">
           Discover Jobs hiring in your city
@@ -174,7 +174,7 @@ function jobs() {
           </div>
         </div>
       </section>
-    </main>
+    </section>
   );
 }
 

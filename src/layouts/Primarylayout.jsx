@@ -1,15 +1,18 @@
 import React from "react";
 import Header from "../components/header.jsx";
-import * as Styled from "../styles/primaryLayout";
+import Footer from "../components/footer.jsx";
+import * as Styled from "../styles/primaryLayout.jsx";
 
-export const PrimaryLayout = ({ Children }) => {
+const PrimaryLayout = ({ children }) => {
   return (
-    <>
-      <Styled.LayoutContainer>
-        <Header />
-        <div className="container mx-auto bg-black"><h1>hello</h1>{Children}</div>
-      </Styled.LayoutContainer>
-    </>
+    <Styled.LayoutContainer>
+      <Header />
+      <Styled.PageContainer>
+        <Styled.Before></Styled.Before>
+        {children}
+      </Styled.PageContainer>
+      <Footer />
+    </Styled.LayoutContainer>
   );
 };
 
