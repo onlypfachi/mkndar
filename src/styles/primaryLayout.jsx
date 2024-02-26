@@ -14,6 +14,7 @@ flex-direction: column;
 export const PageContainer = Styled.main`
 width: 1200px;
 padding: 20px;
+margin-top: 30%;
 `;
 
 export const Before = Styled.div`

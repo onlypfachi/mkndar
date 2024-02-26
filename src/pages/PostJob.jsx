@@ -1,115 +1,115 @@
-import { React } from "react";
+import React from "react";
 
 function PostJobs() {
-  function search(formData) {
-    const query = formData.get("query");
-    alert(`You searched for '${query}'`);
-    console.log(query);
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const jobTitle = formData.get("jobTitle");
+    const jobDescription = formData.get("jobDescription");
+    const qualifications = formData.get("qualifications");
+    const employmentType = formData.getAll("employmentType");
+    const workingSchedule = formData.get("workingSchedule");
+    const salary = formData.get("salary");
+    const multipleCandidates = formData.get("multipleCandidates");
+
+    // Do something with the form data, such as sending it to the server
+    console.log({
+      jobTitle,
+      jobDescription,
+      qualifications,
+      employmentType,
+      workingSchedule,
+      salary,
+      multipleCandidates
+    });
   }
+
   return (
-    <main className="bg-sky-500 h-dvh flex flex-col items-center ">
+    <main className="bg-sky-500 h-screen flex flex-col items-center justify-center">
       <form
-        action={search}
-        className=" mt-20 w-[1100px] bg-white border border-4 rounded-lg h-full overflow-auto"
+        onSubmit={handleSubmit}
+        className="w-[600px] bg-white border border-4 rounded-lg p-8"
       >
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <label for="jobTitle" className="ml-5 text-left text-2xl">
+        <div className="mb-6">
+          <label htmlFor="jobTitle" className="block text-2xl font-semibold">
             Job Title
           </label>
           <input
             type="text"
-            className="w-2/5 self-end mr-10"
+            id="jobTitle"
             name="jobTitle"
+            className="w-full border-2 border-gray-300 rounded-md py-2 px-4 mt-2"
             placeholder="e.g. Kitchen staff"
-          ></input>
-          <p className="text-sm text-left ml-5 mb-4">
-            A job title must describe one position only
-          </p>
+            required
+          />
         </div>
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <label for="jobTitle" className="ml-5 text-left text-2xl">
-            Job description
+        <div className="mb-6">
+          <label
+            htmlFor="jobDescription"
+            className="block text-2xl font-semibold"
+          >
+            Job Description
           </label>
-          <p className="text-sm text-left ml-5 mb-4">
-            A job title must describe one position only
-          </p>
           <textarea
-            type="text"
-            className="w-2/5 self-end mr-10"
-            name="jobTitle"
-            placeholder="e.g. Kitchen staff"
+            id="jobDescription"
+            name="jobDescription"
+            rows="4"
+            className="w-full border-2 border-gray-300 rounded-md py-2 px-4 mt-2"
+            placeholder="Enter job description"
+            required
           ></textarea>
         </div>
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <label for="jobTitle" className="ml-5 text-left text-2xl">
+        <div className="mb-6">
+          <label
+            htmlFor="qualifications"
+            className="block text-2xl font-semibold"
+          >
             Qualifications
           </label>
-          <p className="text-sm text-left ml-5 mb-4">
-            A job title must describe one position on
-          </p>
           <textarea
-            type="text"
-            className="w-2/5 self-end mr-10"
-            name="jobTitle"
-            placeholder="e.g. Kitchen staff"
+            id="qualifications"
+            name="qualifications"
+            rows="4"
+            className="w-full border-2 border-gray-300 rounded-md py-2 px-4 mt-2"
+            placeholder="Enter qualifications"
+            required
           ></textarea>
         </div>
-        <fieldset className="flex flex-col items-left justify-center border-b-2 border-black">
-          <legend>Employment type</legend>
-          <div>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
-            <label for="coding">Full time</label>
-          </div>
-          <div>
-            <input type="checkbox" id="music" name="interest" value="music" />
-            <label for="music">Part time</label>
-          </div>
-          <div>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
-            <label for="coding">On demand</label>
-          </div>
-          <div>
-            <input type="checkbox" id="music" name="interest" value="music" />
-            <label for="music">Negotiable</label>
-          </div>
-        </fieldset>
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <label for="jobTitle" className="ml-5 text-left text-2xl">
-            Working Schedule
-          </label>
-          <p className="text-sm text-left ml-5 mb-4">
-            You can pick multiple work schedules
-          </p>
-          <select
-            type="text"
-            className="w-2/5 self-end mr-10"
-            name="jobTitle"
-            placeholder="e.g. Kitchen staff"
-          ></select>
+        <div className="mb-6">
+          <fieldset>
+            <legend className="text-2xl font-semibold">Employment Type</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="fullTime"
+                name="employmentType"
+                value="Full Time"
+              />
+              <label htmlFor="fullTime" className="ml-2">
+                Full Time
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="partTime"
+                name="employmentType"
+                value="Part Time"
+              />
+              <label htmlFor="partTime" className="ml-2">
+                Part Time
+              </label>
+            </div>
+            {/* Add more employment type options as needed */}
+          </fieldset>
         </div>
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <label for="jobTitle" className="ml-5 text-left text-2xl">
-            Salary
-          </label>
-          <p className="text-sm text-left ml-5 mb-4">
-            Choose how you prefer to pay for this job
-          </p>
-          <select
-            type="text"
-            className="w-2/5 self-end mr-10"
-            name="jobTitle"
-            placeholder="e.g. Kitchen staff"
-          ></select>
-        </div>
-        <div className="flex flex-col items-left justify-center border-b-2 border-black">
-          <h1>Multiple candidates?</h1>
-          <div className="items-left">
-            <input type="checkbox" id="music" name="interest" value="music" />
-            <label for="music">Yes, I am hiring multiple candidates</label>
-          </div>
-        </div>
-
-        <button type="submit">Post Job</button>
+        {/* Add more form fields as needed */}
+        <button
+          type="submit"
+          className="w-full bg-indigo-500 text-white font-semibold py-2 rounded-md"
+        >
+          Post Job
+        </button>
       </form>
     </main>
   );

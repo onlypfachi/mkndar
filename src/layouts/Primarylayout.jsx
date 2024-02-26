@@ -8,7 +8,6 @@ const PrimaryLayout = ({ children }) => {
     <Styled.LayoutContainer>
       <Header />
       <Styled.PageContainer>
-        <Styled.Before></Styled.Before>
         {children}
       </Styled.PageContainer>
       <Footer />
