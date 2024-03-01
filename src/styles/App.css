@@ -1,151 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400&family=Poppins:wght@100;300;400;700&display=swap");
-
+/* styles/Header.css */
 .headerWrapper {
-  display: inline-grid;
-  position: fixed;
-  width: 100vw;
-  height: 70px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: rgb(73, 96, 172);
-  grid-template-rows: 10% 80% 10%;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  top: 0px;
-  left: 0px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
+  width: 100%;
 }
 
 .navWrapper {
-  color: #000000;
-  justify-content: space-between;
-  justify-items: center;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  height: fit-content;
-  margin-top: 12px;
+  display: flex;
+  align-items: center;
 }
 
-ul{
-  display: inline-flex;
+.navLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.navWrapper li {
+.navLinks li {
+  margin-right: 20px;
+}
+
+.navLinks a {
   text-decoration: none;
-  margin-left: 20px;
-  margin-top: 10px;
-  list-style-type: none;
-  gap: 5px;
-  border-color: #000000;
-  font-size: rem;
+  color: #fff;
+  font-weight: bold;
 }
-.navWrapper li:hover {
+
+.navLinks a:hover {
   color: rgb(0, 0, 255);
 }
 
-.link {
-  text-decoration: none;
-  font-size: large;
-  color: black;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Poppins', sans-serif;
-}
-.link:hover {
-  border-radius: 5px;
-  color: rgb(23, 23, 83);
+.logoWrapper {
+  display: flex;
+  align-items: center;
 }
 
-.logoWrapper {
-  height: 100%;
-  display: grid;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 6;
-  grid-column-end: 8;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-}
 .logo {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  object-fit: cover;
-  height: 100%;
-  width: 50%;
+  height: 50px;
+  margin-right: 10px;
 }
-.logoTypo { 
-  font-size: 2rem;
+
+.logoTypo {
+  font-size: 1.5rem;
   color: rgb(10, 20, 120);
-  text-align: center;
-  height: 100%;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  width: 100%;
-}
-.logoTypo:hover {
-  color: rgb(6, 19, 166);
 }
 
 .buttonWrapper {
-  display: grid;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 8;
-  grid-column-end: 11;
-  gap: 10px;
-  grid-template-columns: 10% 10% 30% 30%;
-  grid-template-rows: 100%;
 }
 
-p {
-  border-style: none;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: black;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  justify-content: center;
-  margin: auto;
-  width: 100%;
-}
-.logInbtn:hover {
-  background: #dee3e5;
+.userName {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.avatar {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  height: 90%;
-  width: 50%;
-}
 .signupBtn {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  border-radius: 10px;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: rgba(0, 0, 0, 0) 5px 2px 15px 5px;
-  border: 2px solid rgb(28, 110, 164);
-  margin: auto;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  width: 70%;
+  background-color: #1c6ea4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
+
 .signupBtn:hover {
-  background: #1c6ea4;
+  background-color: #144e75;
 }
+
 .signupBtn:active {
-  background: #144e75;
+  background-color: #0e3752;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hide the nav links on mobile */
+  }
 }

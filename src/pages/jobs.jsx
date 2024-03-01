@@ -8,7 +8,7 @@ function jobs() {
   const color = "#" + randomColor;
 
   return (
-    <main className="flex gap-5 flex-col relative m-auto">
+    <section className="flex gap-5 flex-col relative m-auto mt-20 ">
       <div id="pageTitle" className="mt-20 h-36 text-center w-full z-99 mb-10">
         <h3 className="h-12 text-4xl font-bold">
           Discover Jobs hiring in your city
@@ -167,14 +167,14 @@ function jobs() {
             </p>
             <button
               type="button"
-              className="mt-2 h-10 inline-block rounded px-6 text-xl font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#54b4d3] bg-indigo-500"
+              className="mt-2 h-10 inline-block rounded px-6 text-xl font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#54b4d3] bg-indigo-500 mb-4"
             >
               Apply Now
             </button>
           </div>
         </div>
       </section>
-    </main>
+    </section>
   );
 }
 

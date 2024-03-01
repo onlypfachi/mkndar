@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import "../styles/App.css";
+import "../styles/App.css"; // Import the header styles
 import Avatar from "./avatar";
 import logo from "../images/chrome_UNGhGohFWN.png";
 
@@ -33,32 +33,29 @@ function Header() {
       title: "About Us",
     },
   ];
-  const [isAuth, setIsAuth] = useState("false");
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
     <header className="headerWrapper">
-      <div className="navWrapper">
+      {/* Navigation Links */}
+      <nav className="navWrapper">
         <ul className="navLinks">
-          {navlinks.map((link) => {
-            return (
-              <li>
-                <Link to={link.href} className="link">
-                  {link.title}
-                </Link>
-              </li>
-            );
-          })}
+          {navlinks.map((link) => (
+            <li key={link.id}>
+              <Link to={link.href} className="link">
+                {link.title}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </div>
-      <div className="grid h-16 mt-1 col-start-5 col-span-2 row-span-1 gird-cols-3">
-        <img
-          className="mx-auto h-10 mt-3 col-span-1"
-          src={logo}
-          alt="mukunda_logo"
-        />
-        <p className="col-start-2 col-span-2 color-sky-1200 h-10 text-2xl">
-          mukunda.
-        </p>
-      </div>
+        {/* Logo */}
+        <div className="logoWrapper">
+          <img className="logo" src={logo} alt="mukunda_logo" />
+          <p className="logoTypo">mukunda.</p>
+        </div>
+      </nav>
+      
+      {/* Avatar and User Controls */}
       <div className="buttonWrapper">
         <div className="avatar">
           <Avatar />

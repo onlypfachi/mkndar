@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="bg-secondary-100 text-center dark:bg-secondary-600">
+        <footer className="bg-secondary-100 text-center dark:bg-secondary-600 w-full border-t border-gray-200">
             {/* <!--Sign-up form section--> */}
             <div className="px-6 pt-6">
                 <form action="">

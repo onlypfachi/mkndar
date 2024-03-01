@@ -23,11 +23,11 @@ const items = [
 
 export default function RecentJobs() {
     return (
-        <div className="grid grid-col-10 items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6 flex-row h-dvh grid-cols-12">
-            <di className="grid bg-white h-screen w-full space-y4 col-start-3 col-span-8 grid-cols-6">
-                <h3 className="col-start-1 col-span-5 h-3">Recently uploaded jobs</h3>
-                {items.map((item) => {
-                    return (
+        <section className="px-4 py-3 sm:px-6 bg-red-100">
+        <h3 className="text-2xl font-bold text-gray-900">Recently uploaded jobs</h3>
+        <div className="grid gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
+                {items.map((item) => (
+                
                         <div className="lg:flex lg:items-center lg:justify-between flex-row  ml-10px h-48 w-full p-16 justify-items-center col-start-1 col-span-8 " >
                             <div className="min-w-0 flex-1">
                                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
@@ -73,10 +73,10 @@ export default function RecentJobs() {
                             </div>
                         </div>
                     )
-                })}
-            </di>
+                )}
+            </div>
 
 
-        </div>
+        </section>
     )
 }
