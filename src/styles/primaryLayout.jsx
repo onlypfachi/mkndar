@@ -7,14 +7,13 @@ min-height: 100vh;
 height: 100vh;
 width: 100%;
 align-items: center;
-justify-content: center;
+// justify-content: center;
 flex-direction: column;
 `;
 
 export const PageContainer = Styled.main`
 width: 1200px;
-padding: 20px;
-margin-top: 30%;
+margin-top: 4%;
 `;
 
 export const Before = Styled.div`

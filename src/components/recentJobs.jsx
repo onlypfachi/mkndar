@@ -23,7 +23,7 @@ const items = [
 
 export default function RecentJobs() {
     return (
-        <section className="px-4 py-3 sm:px-6 bg-red-100">
+        <div className="px-4 py-3 sm:px-6 bg-red-100">
         <h3 className="text-2xl font-bold text-gray-900">Recently uploaded jobs</h3>
         <div className="grid gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
                 {items.map((item) => (
@@ -77,6 +77,6 @@ export default function RecentJobs() {
             </div>
 
 
-        </section>
+        </div>
     )
 }
