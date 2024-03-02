@@ -2,7 +2,7 @@ import React from "react";
 // import img from "../images/bgg.jpg";
 import MiniJobCard from "../components/jobs/MiniJobCard";
 
-function jobs() {
+function Jobs() {
   const topics = ["success", "failure", "yellow", " yellow"];
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const color = "#" + randomColor;
@@ -178,4 +178,4 @@ function jobs() {
   );
 }
 
-export default jobs;
+export default Jobs;
