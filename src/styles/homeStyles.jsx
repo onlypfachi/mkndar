@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 
 export const LandingPage = Styled.div`
-    height: 50dvh;
+    height: 80dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
