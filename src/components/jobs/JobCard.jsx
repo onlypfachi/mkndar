@@ -9,7 +9,7 @@ import {
 
 export const JobCard = ({ job }) => {
   return (
-    <div className="bg-sky-100">
+    <div className="bg-sky-100 mb-2 rounded-lg">
       <div className="grid gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
         <div className="lg:flex lg:items-center lg:justify-between flex-row ml-10px h-48 w-full p-16 justify-items-center col-start-1 col-span-8">
           <div className="min-w-0 flex-1">
