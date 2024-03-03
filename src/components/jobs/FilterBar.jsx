@@ -54,7 +54,7 @@ export const FilterBar = () => {
               {location}
             </option>
           ))}
-        </select>{" "}
+        </select>
         <div className="flex gap-2">
         <input
           type="text"
