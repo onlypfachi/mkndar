@@ -33,7 +33,12 @@ function Header() {
       title: "About Us",
     },
   ];
-  const [isAuth, setIsAuth] = useState(false);
+  const loggedIn = localStorage.getItem("isAuth");
+  const [isAuth, setIsAuth] = useState(loggedIn);
+  const handleLogout = () => {
+    localStorage.removeItem("isAuth");
+    setIsAuth(false);
+  }
 
   return (
     <header className="headerWrapper">
@@ -69,7 +74,7 @@ function Header() {
             "Tadiwa pfachi"
           )}
         </p>
-        <button className="signupBtn">
+        <button className="signupBtn" onClick={handleLogout}>
           {!isAuth ? (
             <Link to="/login" className="link">
               Sign up

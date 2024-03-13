@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home  from "./pages/Home.jsx";
+import Home  from "./pages/Home";
 import Jobs from "./pages/Jobs.jsx";
 import PostJob from "./pages/PostJob.jsx";
-import About from "./pages/About.jsx";
-import Login from "./pages/Login.jsx";
-import Error from "./components/errors.jsx";
+import About from "./pages/about";
+import Login from "./pages/Login";
+import Error from "./components/errors";
 import "./styles/App.css";
-import Blogposts from "./pages/Blogs.jsx";
-import PrimaryLayout from "./layouts/Primarylayout.jsx";
+import Blogposts from "./pages/Blogs";
+import PrimaryLayout from "./layouts/Primarylayout";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);

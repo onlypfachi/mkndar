@@ -1,19 +1,20 @@
 import React from "react";
-// import { auth, provider } from "../firebase-config.js";
+import { auth, provider } from "../firebase-config.js";
 import "firebase/auth";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/LogIn.css";
 import logo from "../images/chrome_UNGhGohFWN.png";
-export default function Login(/*{ setIsAuth }*/) {
-  //   const navigate = useNavigate();
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+export default function Login({ setIsAuth }) {
+  const navigate = useNavigate();
 
-  // const signInWithGoogle = () => {
-  //   signInWithPopup(auth, provider).then((result) => {
-  //     localStorage.setItem("isAuth", true);
-  //     setIsAuth(true);
-  //     navigate("/");
-  //   });
-  // };<button id="googlebutton" onClick={signInWithGoogle}>
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      localStorage.setItem("isAuth", true);
+      setIsAuth(true);
+      navigate("/");
+    });
+  };
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
@@ -83,7 +84,7 @@ export default function Login(/*{ setIsAuth }*/) {
               </button>
             </div>
           </form>
-
+          <button id="googlebutton" onClick={signInWithGoogle} className="bg-sky-900">Singn with googlw</button>
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{" "}
             <a
