@@ -4,19 +4,20 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore"
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { collection, getDocs } from 'firebase/firestore/lite';
+import { env } from "process";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDGStVEKCezePd0cnYnHTqCRyLfTy5ln1g",
-  authDomain: "mukunda-zimbabwe.firebaseapp.com",
-  projectId: "mukunda-zimbabwe",
-  storageBucket: "mukunda-zimbabwe.appspot.com",
-  messagingSenderId: "68510142287",
-  appId: "1:68510142287:web:732a87862b648cdde0bf3a",
-  measurementId: "G-BG21Y2J4ZS"
+  apiKey: env.FIREBASE_API_KEY,
+  authDomain: env.FIREBASE_AUTH_DOMAIN,
+  projectId: env.FIREBASE_PROJECT_ID,
+  storageBucket: env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: env.FIREBASE_APP_ID,
+  measurementId: env.fIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
